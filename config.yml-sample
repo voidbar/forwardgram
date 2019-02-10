@@ -5,9 +5,9 @@ session_name: 'forwardgram' # Session name.
 # The channel names that you'd like to forward messages from.
 # The user running the client must have these channels present on it's dialogs.
 input_channel_names:
-  - 'Channel A'
-  - 'Channel B'
+  - 'Channel Name A'
+  - 'Channel Name B'
 
 # The output channel name that the messages will be forwarded to.
 # The user running the client must be that channel admin, and have the channel present on it's dialogs.
-output_channel_name: 'Deals Combined'
+output_channel_name: 'My Cool Channel Name'
