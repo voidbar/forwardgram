@@ -4,8 +4,10 @@ import yaml
 import sys
 import logging
 
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+logging.getLogger('telethon').setLevel(level=logging.WARNING)
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
+
 
 def start(config):
     client = TelegramClient(config["session_name"], 
@@ -22,11 +24,10 @@ def start(config):
     if output_channel_entity is None:
         logger.error(f"Could not find the channel \"{config['output_channel_name']}\" in the user's dialogs")
         sys.exit(1)
-    print(f"Listening on {len(input_channels_entities)} channels. Forwarding messages to {config['output_channel_name']}")
+    logging.info(f"Listening on {len(input_channels_entities)} channels. Forwarding messages to {config['output_channel_name']}.")
     @client.on(events.NewMessage(chats=input_channels_entities))
     async def handler(event):
-        e = await client.get_entity(event.message.to_id)
-        await client.send_message(output_channel_entity, f"\"{e.title}\" Said:\n{event.message.message}")
+        await client.forward_messages(output_channel_entity, event.message)
 
     client.run_until_disconnected()
 
