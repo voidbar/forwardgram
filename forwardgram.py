@@ -14,7 +14,9 @@ def start(config):
                             config["api_id"], 
                             config["api_hash"])
     client.start()
+
     input_channels_entities = []
+    output_channel_entity = None
     for d in client.iter_dialogs():
         if d.name in config["input_channel_names"]:
             input_channels_entities.append(InputChannel(d.entity.id, d.entity.access_hash))
@@ -25,6 +27,7 @@ def start(config):
         logger.error(f"Could not find the channel \"{config['output_channel_name']}\" in the user's dialogs")
         sys.exit(1)
     logging.info(f"Listening on {len(input_channels_entities)} channels. Forwarding messages to {config['output_channel_name']}.")
+    
     @client.on(events.NewMessage(chats=input_channels_entities))
     async def handler(event):
         await client.forward_messages(output_channel_entity, event.message)
