@@ -1,6 +1,6 @@
-api_id: 123456 # This has to be an integer.
-api_hash: 'abcdefg' # Long 32 characters hash identifier.
-session_name: 'forwardgram' # Session name.
+api_id: 123456 # This has to be an integer. Read more [here](https://core.telegram.org/api/obtaining_api_id)
+api_hash: 'abcdefg' # Long 32 characters hash identifier. Read more [here](https://core.telegram.org/api/obtaining_api_id)
+session_name: 'forwardgram' # # Session name. Only one session (with a unique session name) can run at a time
 
 # The channel names that you'd like to forward messages from.
 # The user running the client must have these channels present on it's dialogs.
@@ -8,6 +8,6 @@ input_channel_names:
   - 'Channel Name A'
   - 'Channel Name B'
 
-# The output channel name that the messages will be forwarded to.
-# The user running the client must be that channel admin, and have the channel present on it's dialogs.
+# The output channel names that the messages will be forwarded to.
+# The user running the client must have a write access to those channels, and have the channels present on theirs dialogs.
 output_channel_name: 'My Cool Channel Name'
