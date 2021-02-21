@@ -13,3 +13,13 @@ input_channel_names:
 output_channel_names: 
   - 'Output Channel Name 1'
   - 'Output Channel Name 2'
+
+# The channel IDs that you'd like to forward messages from. (You can get a channel ID by forwarding any message from it to @userinfobot , and removing the -100 from the start )
+input_channel_ids:
+  - 'Input Channel ID 1' # without quotes ''
+  - 'Input Channel ID 2' # without quotes ''
+
+# The output channel IDs that the messages will be forwarded to. (You can get a channel ID by forwarding any message from it to @userinfobot , and removing the -100 from the start )
+output_channel_ids: 
+  - 'Output Channel ID 1' # without quotes ''
+  - 'Output Channel ID 2' # without quotes ''
