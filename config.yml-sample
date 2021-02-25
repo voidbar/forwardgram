@@ -16,10 +16,13 @@ output_channel_names:
 
 # The channel IDs that you'd like to forward messages from. (You can get a channel ID by forwarding any message from it to @userinfobot , and removing the -100 from the start )
 input_channel_ids:
-  - 'Input Channel ID 1' # without quotes ''
-  - 'Input Channel ID 2' # without quotes ''
+  - ID1 # Input Channel ID without quotes ''
+  - ID2
 
 # The output channel IDs that the messages will be forwarded to. (You can get a channel ID by forwarding any message from it to @userinfobot , and removing the -100 from the start )
 output_channel_ids: 
-  - 'Output Channel ID 1' # without quotes ''
-  - 'Output Channel ID 2' # without quotes ''
+  - ID1 # Output Channel ID without quotes ''
+  - ID2
+
+# An empty list should be set like this: 
+# input_channel_ids: []
