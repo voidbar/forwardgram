@@ -1,6 +1,6 @@
 <img src="resources/new_logo.gif">
 
-* Support & FAQ Discord : <a href="https://discord.gg/UcxcyxS5X8"><img src="https://discord.com/assets/f9bb9c4af2b9c32a2c5ee0014661546d.png" width="18" height="18"></img></a>
+* JOIN Support & FAQ Discord 👉 <a href="https://discord.gg/UcxcyxS5X8"><img src="https://discord.com/assets/f9bb9c4af2b9c32a2c5ee0014661546d.png" width="18" height="18"></img></a>
 
 ```
 As always, I took bits from an open source repo and rebranded it into a useful bot with detailed instructions.
@@ -9,11 +9,11 @@ Please star my repo if this contribution helped you ! Its FREEE !
 Please Join Support & FAQ Discord if you have questions.
 
 ```
-# Telegram to Discord Message Bot — Forward telegram messages to discord
+# Telegram to Discord Message Bot — Forward Telegram Messages to Discord
 
 ## Description
+Forwardgram is a free and open source, telegram to discord message bot. It enables one to forward messages from Multiple Telegram channels to one (or more) Telegram/Discord channels of your own. This python bot monitors multiple telegram channels. When a new message/entity is sent, it will parse the response and forward it to a discord channel using your own personalized bot. It will also forward the same message to your own Telegram channel.
 
-Forward messages from Multiple Telegram channels to one (or more) Telegram/Discord channels of your own.
 
 ## Getting Started
 
@@ -40,7 +40,7 @@ Forward messages from Multiple Telegram channels to one (or more) Telegram/Disco
 
 1. Change the name of `config.yml-sample` to `config.yml`
 
-#### Filling config.yml file
+#### Filling `config.yml` file
 
 * Create a two channels on Telegram as `channel_send` and `channel_recieve` and fill in their channel ids in config.yml
 * Add your Telegram `api_id` and `api_hash` to config.yml | Read more [here](https://core.telegram.org/api/obtaining_api_id)
@@ -57,7 +57,7 @@ Forward messages from Multiple Telegram channels to one (or more) Telegram/Disco
 3. Run the command `python3 forwardgram.py config.yaml`
 
 ```
-Please note that in the first time initializing the script, you will be requried to validate your phone number using telegram API. This happens only at the first time (per session name).
+***PLEASE NOTE:  In the first time initializing the script, you will be requried to validate your phone number using telegram API. This happens only at the first time (per session name).
 ```
 
 ## Authors
