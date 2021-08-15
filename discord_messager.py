@@ -42,11 +42,6 @@ async def on_ready():
     channel_3 = discord_client.get_channel(config["discord_3_channel"])
     channel_4 = discord_client.get_channel(config["discord_4_channel"])
 
-''' 
-------------------------------------------------------------------------
-    MESSAGE SCREENER -- Its stricter than immigration
-------------------------------------------------------------------------
-'''
     if 'Mario' in message:
         await channel_1.send(message)
     elif 'Zelda' in message:
