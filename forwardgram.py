@@ -51,11 +51,8 @@ def start(config):
     # Use logging and print messages on your console.     
     logging.info(f"Listening on {len(input_channels_entities)} channels. Forwarding messages to {len(output_channel_entities)} channels.")
     
-''' 
-------------------------------------------------------------------------
-    TELEGRAM NEW MESSAGE - When new message triggers, come here
-------------------------------------------------------------------------
-'''
+
+    # TELEGRAM NEW MESSAGE - When new message triggers, come here
 
     @client.on(events.NewMessage(chats=input_channels_entities))
     async def handler(event):
