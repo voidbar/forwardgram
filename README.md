@@ -1,6 +1,7 @@
 <img src="resources/new_logo.gif">
 
-* JOIN Support & FAQ Discord 👉 <a href="https://discord.gg/UcxcyxS5X8"><img src="https://discord.com/assets/f9bb9c4af2b9c32a2c5ee0014661546d.png" width="18" height="18"></img></a>
+![Discord](https://img.shields.io/discord/863863008329596968?color=%237289da%20&label=FOR%20SUPPORT%20AND%20FAQs%20%20%7C%20JOIN%20DISCORD&style=for-the-badge)
+<br>
 
 ```
 As always, I took bits from an open source repo and rebranded it into a useful bot with detailed instructions.
