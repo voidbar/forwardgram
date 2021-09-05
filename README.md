@@ -18,25 +18,33 @@ Run script locally to sign in to Telegram application. File `forwardgram.session
 All code beyond specific to Azure Linux instances - AWS and other hosters will have different default user and different folders.
 
 Sign in to VM and create folder `forwardgram` in default user folder (run remotely)
+
 `mkdir forwardgram`
 
 Copy files from local machine to VM (run locally)
+
 `scp -i <path to pem file> * azureuser@<VM IP>:/home/azureuser/forwardgram`
 
 Copy `forwardgram.service` to `/etc/systemd/system` (run remotely)
+
 `cp forwardgram.service /etc/systemd/system/forwardgram.service`
 
 Reload daemon (run remotely)
+
 `sudo systemctl daemon-reload`
 
 Enable our service (run remotely)
+
 `sudo systemctl enable forwardgram.service`
 
 Start our service (run remotely)
+
 `sudo systemctl start forwardgram.service`
 
 Now you can check service status (run remotely)
+
 `sudo systemctl status forwardgram.service`
 
 or inspect logs (run remotely)
+
 `sudo journalctl -u forwardgram.service -n 50 --no-pager`
