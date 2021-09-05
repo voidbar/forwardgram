@@ -1,0 +1,13 @@
+[Unit]
+Description=Telegram forwarder
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=always
+WorkingDirectory=/home/azureuser/
+User=azureuser
+ExecStart=/usr/bin/python3 /home/azureuser/forwardgram/forwardgram.py /home/azureuser/forwardgram/config.yml
+
+[Install]
+WantedBy=multi-user.target
