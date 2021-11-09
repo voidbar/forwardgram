@@ -6,7 +6,7 @@ Forward messages from multiple Telegram channels or chats to one (or more) chat 
 
 ## Setup
 - `python3 -m pip install -r requirements.txt`.
-- Fill out a configuration file. An exmaple file can be found at `config.yml-sample`. 
+- Fill out a configuration file. An example file can be found at `config.yml-sample`. 
 
 ## Run
 `python3 forwardgram.py {YOUR_CONFIG_FILE}`
