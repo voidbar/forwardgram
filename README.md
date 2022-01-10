@@ -1,7 +1,6 @@
 <img src="resources/new_logo.gif">
 
-![Discord](https://img.shields.io/discord/863863008329596968?color=%237289da%20&label=FOR%20SUPPORT%20AND%20FAQs%20%20%7C%20JOIN%20DISCORD&style=for-the-badge)
-<br>
+* JOIN Support & FAQ Discord 👉 <a href="https://discord.gg/UcxcyxS5X8"><img src="https://discord.com/assets/f9bb9c4af2b9c32a2c5ee0014661546d.png" width="18" height="18"></img></a>
 
 ```
 As always, I took bits from an open source repo and rebranded it into a useful bot with detailed instructions.
@@ -10,7 +9,12 @@ Please star my repo if this contribution helped you ! Its FREEE !
 Please Join Support & FAQ Discord if you have questions.
 
 ```
-# Telegram to Discord Message Bot — Forward Telegram Messages to Discord
+# Telegram to Discord Message Bot — Forward Telegram Messages to Discord 
+<img src="https://img.shields.io/badge/Status-works%20after%20lot%20of%20debugging-red"> <img src="https://img.shields.io/badge/Python%20Skill-intermediate%20-brightgreen"> 
+
+## This repo will soon be archived and won't be supported.
+* Advanced python users post your debug queries here : <a href="https://discord.gg/UcxcyxS5X8"><img src="https://discord.com/assets/f9bb9c4af2b9c32a2c5ee0014661546d.png" width="18" height="18"></img></a>
+
 
 ## Description
 Forwardgram is a free and open source, telegram to discord message bot. It enables one to forward messages from Multiple Telegram channels to one (or more) Telegram/Discord channels of your own. This python bot monitors multiple telegram channels. When a new message/entity is sent, it will parse the response and forward it to a discord channel using your own personalized bot. It will also forward the same message to your own Telegram channel.
@@ -72,6 +76,7 @@ Forwardgram is a free and open source, telegram to discord message bot. It enabl
 
 * 1.0 Initial Release 
 	* Shows `SystemExit: None` when discord messages are sent successfully. This is because we trigger `discord_messager.py` as subprocess when a new telegram message is sent in `channel_send` 
+
 
 ## License
 
