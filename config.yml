@@ -1,0 +1,25 @@
+api_id: 12816134 # This has to be an integer. Read more [here](https://core.telegram.org/api/obtaining_api_id)
+api_hash: '3d6a556a840789d09ec6753b5cd7b7c7' # Long 32 characters hash identifier. Read more [here](https://core.telegram.org/api/obtaining_api_id)
+session_name: 'forwardgram1' # Session name. Only one session (with a unique session name) can run at a time
+
+# The channel names that you'd like to forward messages from.
+# The user running the client must have these channels present on it's dialogs.
+input_channel_names:
+  - 'https://t.me/tradingcommunityyyy'
+
+# The output channel names that the messages will be forwarded to.
+# The user running the client must have a write access to those channels, and have the channels present on theirs dialogs.
+output_channel_names: 
+  - 'https://t.me/testingforwared'
+
+# The channel IDs that you'd like to forward messages from. (You can get a channel ID by forwarding any message from it to @userinfobot , and removing the -100 from the start )
+input_channel_ids:
+  - 1318180647 # Input Channel ID without quotes ''
+
+
+# The output channel IDs that the messages will be forwarded to. (You can get a channel ID by forwarding any message from it to @userinfobot , and removing the -100 from the start )
+output_channel_ids: 
+  - 1550887631 # Output Channel ID without quotes ''
+
+# An empty list should be set like this: 
+# input_channel_ids: []

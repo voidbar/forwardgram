@@ -8,13 +8,11 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(level
 logging.getLogger('telethon').setLevel(level=logging.WARNING)
 logger = logging.getLogger(__name__)
 
-
 def start(config):
-    client = TelegramClient(config["session_name"], 
-                            config["api_id"], 
-                            config["api_hash"])
+    client = TelegramClient(config["session_name"], config["api_id"], config["api_hash"])
     client.start()
-
+    print(client)
+    print("starting the client. please wait....")
     input_channels_entities = []
     output_channel_entities = []
     for d in client.iter_dialogs():
@@ -36,7 +34,12 @@ def start(config):
     @client.on(events.NewMessage(chats=input_channels_entities))
     async def handler(event):
         for output_channel in output_channel_entities:
-            await client.forward_messages(output_channel, event.message)
+            print(event)
+            #if event.media is None:
+            if "NIFTYOPTIONS0" in event.text:
+                event.text = event.text.replace('NIFTYOPTIONS0','highrollertraders')
+                print(event.text)
+            await client.send_message(output_channel, event.message)
 
     client.run_until_disconnected()
 
