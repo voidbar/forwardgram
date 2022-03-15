@@ -20,7 +20,7 @@ def start(config):
             input_channels_entities.append(InputChannel(d.entity.id, d.entity.access_hash))
         if d.name in config["output_channel_names"] or d.entity.id in config["output_channel_ids"]:
             output_channel_entities.append(InputChannel(d.entity.id, d.entity.access_hash))
-
+            
     if not output_channel_entities:
         logger.error(f"Could not find any output channels in the user's dialogs")
         sys.exit(1)
@@ -28,9 +28,9 @@ def start(config):
     if not input_channels_entities:
         logger.error(f"Could not find any input channels in the user's dialogs")
         sys.exit(1)
-
+        
     logging.info(f"Listening on {len(input_channels_entities)} channels. Forwarding messages to {len(output_channel_entities)} channels.")
-
+    
     @client.on(events.NewMessage(chats=input_channels_entities))
     async def handler(event):
         for output_channel in output_channel_entities:
